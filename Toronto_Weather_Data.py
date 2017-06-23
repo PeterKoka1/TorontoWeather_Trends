@@ -43,7 +43,7 @@ plt.title('Toronto Airport Temperature Investigation (1940-2012)')
 plt.xlabel('Year')
 plt.ylabel('Average Temperature')
 plt.figure(figsize=(15,13))
-plt.savefig('toronto_weather_trends.pdf', format='pdf)
+plt.plot()
 
 X = merged_data.iloc[:,1:-1]  # vectorizing independent variables
 y = merged_data.iloc[:,2]  # matrix of features
