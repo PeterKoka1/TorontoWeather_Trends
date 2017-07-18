@@ -16,9 +16,9 @@ def toronto_weather_trends():
   data_set.Mean_Temp = data_set.Mean_Temp.astype('int')
   data_set.Year = data_set.Year.astype('int')
 
-  #imputer = Imputer(missing_values='NaN', strategy='mean')
-  #imputer = imputer.fit(data_set[:, 2])
-  #data_set[:, 2] = imputer.fit_transform(data_set[:, 2])
+  imputer = Imputer(missing_values='NaN', strategy='mean')
+  imputer = imputer.fit(data_set[:, 2])
+  data_set[:, 2] = imputer.fit_transform(data_set[:, 2])
 
   sample = data_set[data_set["Year"]==1938]
   sample = np.mean(sample["Mean_Temp"])
